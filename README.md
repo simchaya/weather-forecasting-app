@@ -27,42 +27,16 @@ This app allows users to search for current weather conditions in a specific loc
 
 ## Project Structure
 
-weather-forecasting-app/                   ← project root (kebab-case)
-│
-├─ public/                     ← static assets (logos etc.)
-│    ├─ react.svg
-│    └─ vite.svg            
-│
-├─ src/                        ← all source code
-│    ├─ components/            ← reusable UI components (PascalCase)
-│    │    ├─ Forecast.jsx
-│    │    ├─ SearchBar.jsx
-│    │    └─ WeatherDisplay.jsx
-│    │
-│    ├─ pages/                 ← full-page views (PascalCase)
-│    │    ├─ ForecastPage.jsx
-│    │    └─ Home.jsx
-│    │
-│    ├─ styles/                ← CSS files (kebab-case)
-│    │    ├─ forecast.css
-│    │    ├─ global.css
-│    │    └─ weather-display.css
-│    │
-│    ├─ utils/                 ← helper functions (kebab-case)
-│    │    └─ api.js
-│    │    ├─ convert-temp.js
-│    │    └─ format-date.js
-│    │
-│    ├─ App.jsx                ← main app component (PascalCase)
-│    └─ main.jsx               ← React entry point
-│
-├─ .gitignore                  ← files to ignore in git
-├─ package.json                ← npm dependencies & scripts
-├─ package-lock.json           ← exact versions of dependencies
-├─ vite.config.js              ← Vite configuration
-├─ eslint.config.js            ← linter configuration
-├─ index.html                  ← base HTML template
-└─ README.md                   ← project documentation
+1. Root folder: weather-forecasting-app/ (kebab-case)
+2. Public assets: react.svg, vite.svg
+3. Source code (src/)
+    - components/ → PascalCase (Forecast.jsx, SearchBar.jsx, WeatherDisplay.jsx)
+    - pages/ → PascalCase (ForecastPage.jsx, Home.jsx)
+    - styles/ → kebab-case (forecast.css, global.css, weather-display.css)
+    - utils/ → kebab-case (api.js, convert-temp.js, format-date.js)
+    - App.jsx → main component (PascalCase)
+    - main.jsx → React entry point
+4. Root config files: .gitignore, package.json, package-lock.json, vite.config.js, eslint.config.js, index.html, README.md
 
 ## Installation & Setup
 
