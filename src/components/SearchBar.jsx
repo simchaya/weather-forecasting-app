@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/search-bar.css"
 
 // SearchBar.jsx
 // Simple controlled component for entering a city name and triggering a search.
@@ -16,7 +17,7 @@ export default function SearchBar({ city, setCity, handleSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="search-bar" onSubmit={handleSubmit}>
       <input
         type="text"
         value={city} // Controlled input reflects state

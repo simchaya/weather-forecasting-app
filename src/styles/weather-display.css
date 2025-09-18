@@ -1,42 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Container for current weather */
+.weather-display {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 12px;
+  background: #D9E5FD; /* ❄️ same icy background as forecast cards */
+  border: 2px solid #7da7f6;
+  box-shadow: 0 2px 6px rgba(125, 167, 246, 0.3);
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Hover effect */
+.weather-display:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(125, 167, 246, 0.4); /* ❄️ stronger icy glow */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* City name */
+.weather-display h2 {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  color: #2c3e50;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Temperature highlight */
+.weather-display .temp {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #7da7f6; /* ❄️ icy blue temperature */
+  margin-bottom: 10px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Weather details */
+.weather-display p {
+  font-size: 1rem;
+  color: #555;
+  margin: 6px 0;
 }

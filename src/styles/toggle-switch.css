@@ -1,17 +1,21 @@
-/* src/components/toggle-switch.css */
-.toggle-switch-container {
+/* src/components/toggle-switch.css
+
+  /* Container stays the same */
+  .toggle-switch-container {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
   }
   
+  /* Labels */
   .unit-label {
     font-weight: bold;
     font-size: 1.2rem;
     color: #555;
   }
   
+  /* Switch track */
   .toggle-switch {
     position: relative;
     display: inline-block;
@@ -25,6 +29,7 @@
     height: 0;
   }
   
+  /* Slider with warm-to-cold gradient */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -32,9 +37,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.15), rgb(248, 117, 189)); /* yellow → blue */
+    border-radius: 34px;
     transition: .4s;
   }
+  
   
   .slider:before {
     position: absolute;
@@ -44,26 +51,12 @@
     left: 4px;
     bottom: 4px;
     background-color: white;
+    border-radius: 50%;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
   }
   
   input:checked + .slider:before {
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
   
-  .slider.round:before {
-    border-radius: 50%;
-  }

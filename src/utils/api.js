@@ -32,4 +32,26 @@ export async function fetchWeather(city, apiKey) {
     // function can decide how to handle it (e.g., show error message)
     throw err;
   }
+  
 }
+
+/**
+ * Fetch 5-day / 3-hour forecast from OpenWeatherMap
+ * @param {string} city The city to query
+ * @param {string} apiKey API key
+ * @returns {Promise<object>} Raw JSON forecast data
+ */
+export async function fetchForecast(city, apiKey) {
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`
+    );
+    if (!response.ok) {
+      throw new Error("Forecast not available");
+    }
+    return await response.json();
+  } catch (err) {
+    throw err;
+  }
+}
+

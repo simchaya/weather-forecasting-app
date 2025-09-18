@@ -1,6 +1,7 @@
 import React from "react";
 import { convertToFahrenheit } from "../utils/convert-temp.js";
 import ToggleSwitch from "./ToggleSwitch"; // Import the new component
+import "../styles/weather-display.css";
 
 // WeatherDisplay.jsx
 // Displays weather information fetched from the API.
@@ -28,7 +29,7 @@ export default function WeatherDisplay({ data, loading, error, unit, toggleUnit 
     
   // Main UI showing weather details
   return (
-    <div>
+    <div className="weather-display">
       <h2>{data.name}</h2>
       <p>Temperature: {displayedTemp} °{unit}</p>
       <p>Humidity: {data.main.humidity} %</p>
