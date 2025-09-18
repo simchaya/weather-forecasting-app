@@ -1,3 +1,5 @@
+// src/components/SearchBar.jsx
+
 import React from "react";
 import "../styles/search-bar.css"
 
@@ -8,7 +10,7 @@ import "../styles/search-bar.css"
 // - setCity: function to update input value
 // - handleSearch: function to fetch weather data for the entered city
 export default function SearchBar({ city, setCity, handleSearch }) {
-  
+
   // Called when the form is submitted
   // Prevents default page reload and calls the parent handler with the current city
   const handleSubmit = (e) => {

@@ -1,10 +1,13 @@
+/* src/styles/weather-display.css */
+
 /* Container for current weather */
 .weather-display {
   margin: 20px auto;
   padding: 20px;
   max-width: 600px;
   border-radius: 12px;
-  background: #D9E5FD; /* ❄️ same icy background as forecast cards */
+  background: #D9E5FD;
+  /* ❄️ same icy background as forecast cards */
   border: 2px solid #7da7f6;
   box-shadow: 0 2px 6px rgba(125, 167, 246, 0.3);
   text-align: center;
@@ -14,7 +17,8 @@
 /* Hover effect */
 .weather-display:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(125, 167, 246, 0.4); /* ❄️ stronger icy glow */
+  box-shadow: 0 4px 12px rgba(125, 167, 246, 0.4);
+  /* ❄️ stronger icy glow */
 }
 
 /* City name */
@@ -28,7 +32,8 @@
 .weather-display .temp {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #7da7f6; /* ❄️ icy blue temperature */
+  color: #7da7f6;
+  /* ❄️ icy blue temperature */
   margin-bottom: 10px;
 }
 
@@ -37,4 +42,11 @@
   font-size: 1rem;
   color: #555;
   margin: 6px 0;
+}
+
+.weather-emojis {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
 }

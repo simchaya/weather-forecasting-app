@@ -1,4 +1,7 @@
+/* src/styles/forecast-display.css */
+
 /* Container for the whole forecast section */
+
 .forecast-container {
   margin: 20px auto;
   padding: 20px;
@@ -10,13 +13,14 @@
   text-align: center;
 }
 
+
 /* Hover effect for the whole forecast block */
 .forecast-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(125, 167, 246, 0.4); /* ❄️ stronger icy glow */
-    transition: all 0.3s ease;
-  }
-  
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(125, 167, 246, 0.4);
+  /* ❄️ stronger icy glow */
+  transition: all 0.3s ease;
+}
 
 /* Section title */
 .forecast-container h3 {
@@ -36,13 +40,13 @@
 }
 
 .forecast-container li {
-    background: #ffffff;
-    border: 3px solid;
-    border-image: linear-gradient(#7da7f6, rgb(248, 117, 189)) 1;
-    padding: 12px;
-    color: #333;
-  }
-  
+  background: #ffffff;
+  border: 3px solid;
+  border-image: linear-gradient(#7da7f6, rgb(248, 117, 189)) 1;
+  padding: 12px;
+  color: #333;
+}
+
 
 /* Hover lift effect */
 .forecast-container li:hover {

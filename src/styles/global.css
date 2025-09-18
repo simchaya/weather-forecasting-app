@@ -1,9 +1,13 @@
+/* src/styles/global.css */
+
 /* Reset + base */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Arial, sans-serif; /* clean modern font */
-  background: linear-gradient(180deg, #e6f2ff, #ffffff); /* icy gradient */
+  font-family: "Poppins", Arial, sans-serif;
+  /* clean modern font */
+  background: linear-gradient(180deg, #e6f2ff, #ffffff);
+  /* icy gradient */
   color: #2c3e50;
   min-height: 100vh;
 }
@@ -13,14 +17,34 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* centers horizontally */
+  justify-content: center;
+  /* optional: also centers vertically */
   padding: 20px;
+  text-align: center;
+  /* make text center by default */
 }
 
 /* Main title */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.2em;
-  color: rgb(248, 117, 189); /* ❄️ icy blue */
+  color: rgb(248, 117, 189);
+  /* ❄️ icy blue */
   text-shadow: 1px 1px 3px rgba(125, 167, 246, 0.4);
-  /* transition: transform 0.2s ease; */
+}
+
+/* Subtitle (h2) */
+h2 {
+  text-align: center;
+  /*  font-style: italic;  */
+  font-weight: 400;
+  font-size: 1.4rem;
+  /* a bit smaller than h1 */
+  margin-top: 0;
+  /* remove extra space above */
+  margin-bottom: 1em;
+  /* spacing below */
+  color: #2c3e50;
+  /* matches your app's dark text */
 }

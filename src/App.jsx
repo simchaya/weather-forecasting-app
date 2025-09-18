@@ -1,3 +1,6 @@
+// src/App.jsx
+
+
 import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import WeatherDisplay from "./components/WeatherDisplay";
@@ -23,7 +26,7 @@ export default function App() {
   const [error, setError] = useState(null);
 
   // Tracks which temperature unit the app is displaying ('C' or 'F')
-  const [unit, setUnit] = useState('C'); 
+  const [unit, setUnit] = useState('C');
 
   // Read API key from environment variables (Vite .env)
   const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
@@ -39,7 +42,7 @@ export default function App() {
       // Fetch current weather from API
       const data = await fetchWeather(searchCity, API_KEY);
       setWeatherData(data); // Update state for WeatherDisplay
-    
+
       // Fetch 5-day forecast
       const forecast = await fetchForecast(searchCity, API_KEY);
       setForecastData(forecast);
@@ -61,7 +64,13 @@ export default function App() {
 
   return (
     <div>
-      <h1>Weather Penguin</h1>
+      <img
+        src="/penguin-emoji.png"
+        alt="penguin emoji"
+        style={{ width: "3em", verticalAlign: "middle" }}
+      />
+      <h1>Weather Penguin </h1>
+
       <h2>for penguins... and people</h2>
       {/* User input component */}
       <SearchBar
@@ -76,7 +85,7 @@ export default function App() {
         loading={loading}
         error={error}
         // Pass the unit state and the toggle function as props
-        unit={unit} 
+        unit={unit}
         toggleUnit={toggleUnit}
       />
 
@@ -87,7 +96,7 @@ export default function App() {
         error={error}
         unit={unit}
       />
-      
+
     </div>
   );
 }

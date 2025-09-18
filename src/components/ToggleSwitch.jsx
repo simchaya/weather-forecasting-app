@@ -1,4 +1,5 @@
 // src/components/ToggleSwitch.jsx
+
 import React from 'react';
 import '../styles/toggle-switch.css'; // We'll create this file next
 

@@ -1,4 +1,5 @@
 // src/components/ForecastDisplay.jsx
+
 import React from "react";
 import { convertToFahrenheit } from "../utils/convert-temp.js";
 import "../styles/forecast-display.css"
@@ -43,6 +44,6 @@ export default function ForecastDisplay({ data, unit }) {
         })}
       </ul>
     </div>
-    
+
   );
 }

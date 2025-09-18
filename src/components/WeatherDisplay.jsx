@@ -1,3 +1,5 @@
+// src/components/WeatherDisplay.jsx
+
 import React from "react";
 import { convertToFahrenheit } from "../utils/convert-temp.js";
 import ToggleSwitch from "./ToggleSwitch"; // Import the new component
@@ -20,13 +22,15 @@ export default function WeatherDisplay({ data, loading, error, unit, toggleUnit 
   if (error) return <p style={{ color: "red" }}>{error}</p>;
 
   // Placeholder message when no city has been entered yet
-  if (!data) return <p>Brrr... type a city so I can waddle over and check the weather!🐧</p>;
+  if (!data) return <p>Brrr... type a city so I can waddle over and check the weather!
+    <p className="weather-emojis"> 🌞 🌧️ ❄️ ☁️ </p>
+  </p>;
 
   // Get the temperature to display based on the current unit
   const displayedTemp = unit === 'C'
     ? data.main.temp
     : convertToFahrenheit(data.main.temp).toFixed(1);
-    
+
   // Main UI showing weather details
   return (
     <div className="weather-display">

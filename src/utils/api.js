@@ -1,4 +1,5 @@
-// api.js
+// src/utils/api.js
+
 // Utility function to fetch weather data from the OpenWeatherMap API
 
 /**
@@ -32,7 +33,7 @@ export async function fetchWeather(city, apiKey) {
     // function can decide how to handle it (e.g., show error message)
     throw err;
   }
-  
+
 }
 
 /**
