@@ -61,6 +61,8 @@ npm run dev
 - Integrate weather icons for different conditions
 - Add animations and playful effects (e.g., penguin wobble 🐧)
 - Add routing for multiple pages
-
+- Add recommendation what to wear and do based on the weather
+- Add autofill for the city search
+- Add MUI
 
 
