@@ -28,8 +28,9 @@ export default function WeatherDisplay({ data, loading, error, unit, toggleUnit 
 
   // Get the temperature to display based on the current unit
   const displayedTemp = unit === 'C'
-    ? data.main.temp
-    : convertToFahrenheit(data.main.temp).toFixed(1);
+    ? Math.round(data.main.temp)
+    : Math.round(convertToFahrenheit(data.main.temp));
+
 
   // Main UI showing weather details
   return (
@@ -40,9 +41,6 @@ export default function WeatherDisplay({ data, loading, error, unit, toggleUnit 
       <p>Wind speed: {data.wind.speed} m/s</p>
       <p>Weather: {data.weather[0].description}</p>
       <ToggleSwitch unit={unit} toggleUnit={toggleUnit} />
-      {/* <button onClick={toggleUnit}>
-        Switch to {unit === 'C' ? 'Fahrenheit' : 'Celsius'}
-      </button> */}
     </div>
   );
 }

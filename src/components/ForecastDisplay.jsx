@@ -33,7 +33,9 @@ export default function ForecastDisplay({ data, unit }) {
       <ul>
         {days.map((day, index) => {
           const tempC = day.main.temp;
-          const temp = unit === "C" ? tempC : convertToFahrenheit(tempC).toFixed(1);
+          const temp = unit === "C"
+            ? Math.round(tempC)
+            : Math.round(convertToFahrenheit(tempC));          
           const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: "long" });
 
           return (
