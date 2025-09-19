@@ -4,10 +4,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Arial, sans-serif;
-  /* clean modern font */
-  background: linear-gradient(180deg, #e6f2ff, #ffffff);
-  /* icy gradient */
+  font-family: "Poppins", Arial, sans-serif; /* clean modern font */
+  background: linear-gradient(180deg, #e6f2ff, #ffffff); /* icy gradient */
   color: #2c3e50;
   min-height: 100vh;
 }
@@ -16,35 +14,58 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* centers horizontally */
-  justify-content: center;
-  /* optional: also centers vertically */
+  align-items: center;  /* centers horizontally */
+  justify-content: center;  /* optional: also centers vertically */
   padding: 20px;
-  text-align: center;
-  /* make text center by default */
+  text-align: center;   /* make text center by default */
 }
 
 /* Main title */
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* responsive scaling */
   margin-bottom: 0.2em;
-  color: rgb(248, 117, 189);
-  /* ❄️ icy blue */
+  color: rgb(248, 117, 189); /* ❄️ icy blue */
   text-shadow: 1px 1px 3px rgba(125, 167, 246, 0.4);
 }
 
 /* Subtitle (h2) */
 h2 {
   text-align: center;
-  /*  font-style: italic;  */
   font-weight: 400;
-  font-size: 1.4rem;
-  /* a bit smaller than h1 */
-  margin-top: 0;
-  /* remove extra space above */
-  margin-bottom: 1em;
-  /* spacing below */
-  color: #2c3e50;
-  /* matches your app's dark text */
+  font-size: clamp(1rem, 3vw, 1.4rem); /* responsive scaling */
+  margin-top: 0;   /* remove extra space above */
+  margin-bottom: 1em; /* spacing below */
+  color: #2c3e50;  /* matches your app's dark text */
+}
+
+/* Responsive tweaks for small screens */
+ @media (max-width: 600px) {
+   .search-bar {
+     flex-direction: column;
+     gap: 12px;
+   }
+
+   .weather-display,
+   .forecast-container {
+     width: 90%; /* shrink cards on small screens */
+   }
+ }
+
+/* Fun wobble animation for penguin logo */
+.penguin-logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* wobble animation on hover */
+.penguin-logo:hover {
+  animation: wobble 0.6s ease;
+}
+
+@keyframes wobble {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  75%  { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
 }

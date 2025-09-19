@@ -1,26 +1,26 @@
-/* src/components/toggle-switch.css
+/* src/components/toggle-switch.css */
 
-  /* Container stays the same */
 .toggle-switch-container {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 15px;
+  justify-content: center; /* keeps it centered on all screens */
 }
 
 /* Labels */
 .unit-label {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem); /* scales on smaller screens */
   color: #555;
 }
 
 /* Switch track */
 .toggle-switch {
   position: relative;
+  width: clamp(40px, 10vw, 60px); /* shrink on small screens */
+  height: clamp(24px, 6vw, 34px);
   display: inline-block;
-  width: 60px;
-  height: 34px;
 }
 
 .toggle-switch input {
@@ -29,7 +29,7 @@
   height: 0;
 }
 
-/* Slider with warm-to-cold gradient */
+/* Slider with gradient */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -38,24 +38,22 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.15), rgb(248, 117, 189));
-  /* yellow → blue */
   border-radius: 34px;
-  transition: .4s;
+  transition: background 0.4s ease, transform 0.4s ease; /* smoother */
 }
-
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: clamp(18px, 5vw, 26px);
+  width: clamp(18px, 5vw, 26px); /* knob scales with track */
   left: 4px;
   bottom: 4px;
   background-color: white;
   border-radius: 50%;
-  transition: .4s;
+  transition: transform 0.4s ease;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(26px);
 }

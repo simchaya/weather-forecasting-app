@@ -67,8 +67,10 @@ export default function App() {
       <img
         src="/penguin-emoji.png"
         alt="penguin emoji"
+        className="penguin-logo"
         style={{ width: "3em", verticalAlign: "middle" }}
       />
+
       <h1>Weather Penguin </h1>
 
       <h2>for penguins... and people</h2>
